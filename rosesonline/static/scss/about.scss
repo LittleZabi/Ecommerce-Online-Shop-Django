@@ -1,0 +1,9 @@
+.about-me{
+    & .in-about{
+        background: rgba(255, 255, 255, 0.706);
+        padding: 34px;
+        margin: 83px 15px;
+        border-radius: 7px;
+        box-shadow: $shadow;
+    }
+}

@@ -1,0 +1,4 @@
+django-resized
+django-summernote
+mysqlclient #mysql-connector-python also change in settin.py -> database > engine > mysql.connector.django
+Pillow
