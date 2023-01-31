@@ -36,7 +36,7 @@ class Products(models.Model):
     image_link = models.CharField(max_length=2048, help_text='Enter image url here', blank=True, default="")
     link = models.CharField(
         max_length=2048, help_text='Enter product url here')
-    short_desc = models.TextField(max_length=1024,
+    short_desc = models.TextField(
                                   help_text='Add a short description of product.', default='', blank=True)
     description = models.TextField(
         help_text='Add something about this item', default='', blank=True)

@@ -56,7 +56,7 @@
       <span>Price <i class="fa fa-usd"></i>{{item.price}}</span>
     </div>
     <div class="df ac jc yellow-c">
-      <a href="/product/{{item.slug}}" class="side-bar-link" title="Buy ({{item.title}}) Product">View Details</a>
+      <a href="/products/{{item.slug}}" class="side-bar-link" title="Buy ({{item.title}}) Product">View Details</a>
     </div>
   </section>
   {% endfor %}
@@ -79,8 +79,8 @@
           {{item.sub_text|safe}}
       </div>
       <div class="uellaoxle">
-        <a href="{{item.link}}" class="blog-btns">Read This</a>
-        <a href="{{item.link}}" class="blog-btns">More Blogs</a>
+        <a href="blogs/{{item.slug}}" class="blog-btns">Read This</a>
+        <a href="/blogs" class="blog-btns">More Blogs</a>
       </div>
     </section>
   {%endfor%}
