@@ -73,14 +73,14 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
-    #  'default': {
-    #     'ENGINE': 'django.db.backends.mysql',
-    #     'NAME': 'avatar_aang',
-    #     'USER': 'root',
-    #     'PASSWORD': '',
-    #     'HOST':'localhost',
-    #     'PORT':'3306',
-    # }
+#    'default': {
+#         'ENGINE': 'mysql.connector.django',
+#         'NAME': 'rokhshop_super_db',
+#         'USER': 'rokhshop_kyoshi',
+#         'PASSWORD': 'AGL&rD?mXidI',
+#         'HOST':'localhost',
+#         'PORT':'3306',
+#     }
 }
 
 
