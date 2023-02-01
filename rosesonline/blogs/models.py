@@ -13,17 +13,18 @@ class IpModel(models.Model):
 class Blogs(models.Model):
     title = models.CharField(max_length=512, blank=False,
                              help_text='Enter title here')
-    body = models.TextField(blank=False, help_text='Enter full text here')
+    body = models.TextField(blank=False, help_text='Enter full text here', verbose_name='Full Description')
     sub_text = models.TextField(
         blank=True,
-         verbose_name='subtext')
+         verbose_name='short description')
     image = ResizedImageField(size=[640, 426], upload_to="blogs/", blank=True, default="")
     image_link = models.CharField(max_length=2048, blank=True, help_text="Enter image url here...")
     slug = models.SlugField(unique=True)
     createdAt = models.DateTimeField(auto_now_add=True)
     updatedAt = models.DateTimeField(auto_now=True)
     author = models.CharField(max_length=255, blank=False)
-    views = models.ManyToManyField(IpModel, related_name="post_views", blank=True)
+    tags = models.CharField(max_length=500, blank=True, default='')
+    views = models.IntegerField(default=539, blank=True, verbose_name="Post Views")
     isNew = models.BooleanField(default=True, blank=False, help_text='this item is new?', verbose_name='is new')
     isActive = models.BooleanField(default=True, blank=False, help_text='enable and disable the product on view.', verbose_name='is active')
 
@@ -33,8 +34,6 @@ class Blogs(models.Model):
     def save(self, *args, **kwargs):
         if not self.slug:
             self.slug = slugify(self.title)
-        # if not self.sub_text:
-        #     self.sub_text = self.body[:1556]
         return  super().save(*args, **kwargs)
 
 

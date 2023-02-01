@@ -7,7 +7,7 @@ class productCategoryAdmin(admin.ModelAdmin):
 
 class ProductsAdmin(SummernoteModelAdmin):
     prepopulated_fields = {'slug': ('title',)}
-    summernote_fields = '__all__'
+    summernote_fields = 'description'
 
 admin.site.register(Products, ProductsAdmin)
 admin.site.register(productCategory, productCategoryAdmin)

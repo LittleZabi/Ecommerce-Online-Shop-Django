@@ -6,7 +6,6 @@ from django.forms.models import model_to_dict
 def getTagsData(request, tags, cur_id):
     tags_data = []
     for tag in tags.split(','):
-        print(tag)
         item = Products.objects.filter(tags__contains=tag).values('id', 'title', 'image','image_link', 'category', 'price', 'slug', 'stars').order_by('-id')[:10]
         for i in item[::-1]:
             iid = i['id']
@@ -23,8 +22,8 @@ def getTagsData(request, tags, cur_id):
     return JsonResponse({'tags_data': tags_data})
 
 def getSideItems(request):
-    recentBlogs = Blogs.objects.values('title', 'createdAt', 'image','image_link', 'slug', 'author', 'isNew')[:10]
-    recentProducts = Products.objects.values('title', 'price', 'image', 'image_link','slug', 'isNew')[:10]
+    recentBlogs = Blogs.objects.values('title', 'createdAt', 'image','image_link', 'slug', 'author', 'isNew', 'views')[:10]
+    recentProducts = Products.objects.values('title', 'price', 'image', 'image_link','slug', 'isNew','views')[:10]
     category_list = productCategory.objects.values('name', 'slug')[:20]
     res = {}
     if recentBlogs:

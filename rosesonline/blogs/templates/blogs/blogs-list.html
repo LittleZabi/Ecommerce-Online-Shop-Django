@@ -18,7 +18,13 @@ left: 638px;">
     {% for blog in page_obj %}
       <section class="blog-section slide-in-obsrvr-init">
         <div class="blog-details">
-          <span class="author">{{blog.author}} - {{blog.createdAt|date:'d / m / Y'}}</span>
+          <span class="author">
+            {{blog.author}} - {{blog.createdAt|date:'d / m / Y'}}
+            <div class="views-counter mashar" style="display:inline">
+              <i class="fa fa-eye"></i> 
+              <span>{{blog.views}}</span>
+            </div>
+          </span>
         </div>
         <h2 class="title">{{blog.title}}</h2>
         <div>

@@ -1,5 +1,21 @@
 {% extends 'products/base.html' %} {% block title %}{{product.title|capfirst}} |
 {{website_name}}{%endblock %} {%block content %} {% include 'components/header.html' %}
+{%block head__ %}
+    <meta name="keywords" content="{{product.tags}}"/>
+    <meta name="description" content="{{product.sub_text}}"/>
+    <meta property="og:title" content="{{product.title}}" />
+    <meta property="og:description" content="{{product.sub_text}}" />
+    <meta property="og:image" content="{%if product.image != '' %}https://rokhshopping.com/{{product.image}}{% else %}{{product.image_link}}{%endif%}" />
+    <meta property="og:site_name" content="Rokh Online Shopping">
+    <meta property="og:url" content="{{product.title}}">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="Rokh Online Shopping">
+    <meta name="twitter:title" content="{{product.title}}">
+    <meta name="twitter:description" content="{{product.sub_text}}">
+    <meta name="twitter:creator" content="@{{product.author}}">
+    <meta name="twitter:image" content="{%if product.image != '' %}https://rokhshopping.com/{{product.image}}{% else %}{{product.image_link}}{%endif%}">
+    <meta name="twitter:image:alt" content="{{product.title}}">
+{%endblock%}
 <div class="page-size colors-bg-rain custom-rain-colors aeiwc">
   <div></div>
   <div></div>
@@ -21,6 +37,7 @@
       <a href="/products/category/{{product.category.slug}}">
         {{product.category.name}}
       </a>
+      
     </li>
     <i class="fa fa-angle-double-right"></i>
     <li>{{product.title}}</li>
@@ -66,7 +83,10 @@
             ></i>
             <span class="ytll"> stars {{product.stars}} out of 5 </span>
           </div>
-
+          <div class="views-counter">
+            <i class="fa fa-eye"></i> 
+            <span>{{product.views}}</span>
+          </div>
           <span class="ytll">
             <i class="fa fa-globe"></i> Global Rating {{product.ratings}}
           </span>

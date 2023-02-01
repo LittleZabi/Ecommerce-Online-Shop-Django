@@ -1,11 +1,12 @@
 from django.shortcuts import render, get_object_or_404
-from django.http import Http404
 from .models import Products,productCategory
-from blogs.models import Blogs
 from django.core.paginator import Paginator
 
 def ProductView(request, item):
+    Products.objects.get(slug=item)
     product = get_object_or_404(Products,slug=item)
+    product.views=product.views + 1
+    product.save()
     categoriesList = productCategory.objects.all()
     return render(request, 'products/product-view.html', context={'product':product, 'categoriesList': categoriesList})
 

@@ -239,6 +239,28 @@ h1, h2, h3, h4, h5 {
   font-size: 10px !important;
 }
 
+.views-counter {
+  color: #454545;
+}
+.views-counter i {
+  font-size: 14px;
+}
+.views-counter span {
+  font-size: 12px;
+}
+
+.mashar {
+  margin: 0 5px;
+}
+
+.urckc {
+  display: flex !important;
+  align-items: center;
+}
+.urckc span {
+  margin: 0 5px !important;
+}
+
 header nav {
   padding: 36px 75px 0px 75px;
   z-index: 1;
@@ -1491,7 +1513,6 @@ footer div {
 }
 
 .from-right {
-  filter: blur(8px);
   opacity: 0;
   animation: fromRight 1s ease-in-out forwards 1;
   transform: translateX(200px);

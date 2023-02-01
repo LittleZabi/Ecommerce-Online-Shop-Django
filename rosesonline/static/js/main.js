@@ -2,7 +2,6 @@
   function closeSearchModal() {
     document.querySelector(".search-result").style.display = "none";
   }
-  // search section
   let search_container = false;
   if (document.getElementById("search-container")) {
     search_container = document.querySelector(
@@ -378,10 +377,10 @@ class sidebarContent {
                         ${
                           item.isNew ? '<span class="new-badge side-bar-sec1224">New</span>' : ""
                         }
+                        
                         </div>
                         <div class="uryal">
                         <h3>${item.title}</h3>
-                        
                         ${
                           type == "blogs"
                             ? ` <span>${item.author} - ${new Date(
@@ -392,11 +391,18 @@ class sidebarContent {
                                 item.createdAt
                               ).getFullYear()}</span>`
                             : `
-                                
-                            <div class="yellow-roar">
-                                <span class="abc-dd3la2">in just <i class="fa fa-usd"></i>${item.price}</span>
-                                <a href="/products/${item.slug}" class="db side-bar-link">Buy Product</a>
-                              </div>`
+                            <div>
+                              <div class="yellow-roar">
+                                  <span class="abc-dd3la2">in just <i class="fa fa-usd"></i>${item.price}</span>
+                                  <a href="/products/${item.slug}" class="db side-bar-link">Buy Product</a>
+                              </div>
+                              ${
+                                item.views ? ` <div class="views-counter mashar urckc" style="display:inline">
+                                <i class="fa fa-eye"></i> 
+                                <span>${item.views}</span>
+                              </div>` : ""
+                            }
+                                </div>`
                         }
                     
                     </div>
