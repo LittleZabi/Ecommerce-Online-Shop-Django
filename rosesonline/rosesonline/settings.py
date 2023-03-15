@@ -119,14 +119,3 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 MEDIA_URL = '/media/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-# SUMMERNOTE_THEME = 'bs5'
-# SUMMERNOTE_CONFIG = {
-#     'summernote': {
-        
-#     },
-#     # 'css': (
-#     #     '//cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/theme/monokai.min.css',
-#     # ),
-
-# }

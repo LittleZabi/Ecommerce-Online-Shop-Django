@@ -1,8 +1,8 @@
 {% extends 'products/base.html' %} {% block title %}{{product.title|capfirst}} |
 {{website_name}}{%endblock %} {%block content %} {% include 'components/header.html' %}
 {%block head__ %}
-    <meta name="keywords" content="{{product.tags}}"/>
-    <meta name="description" content="{{product.sub_text}}"/>
+    <meta name="keywords" content="{{product.keywords}}"/>
+    <meta name="description" content="{{product.short_desc}}"/>
     <meta property="og:title" content="{{product.title}}" />
     <meta property="og:description" content="{{product.sub_text}}" />
     <meta property="og:image" content="{%if product.image != '' %}https://rokhshopping.com/{{product.image}}{% else %}{{product.image_link}}{%endif%}" />

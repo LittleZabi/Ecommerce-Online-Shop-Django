@@ -46,6 +46,7 @@ class Products(models.Model):
     price = models.DecimalField(
         decimal_places=2, max_digits=10, blank=True, default=0.00)
     tags = models.CharField(max_length=500, blank=True, default='')
+    keywords = models.CharField(max_length=500, blank=True, default='')
     views = models.IntegerField(default=689, blank=True, verbose_name="Post Views")
     isNew = models.BooleanField(default=True, blank=False, help_text='this item is new?', verbose_name='is new')
     isActive = models.BooleanField(default=True, blank=False, help_text='enable and disable the product on view.', verbose_name='is active')

@@ -67,9 +67,9 @@
   }
   & .mid-icons {
     & i {
-      font-size: 36px;
-      margin: 80px 28px 10px 0;
       color: $secondary-color;
+      font-size: 33px;
+      margin: 4px 29px 10px 0;
       transition: 300ms;
       &:hover {
         color: $primary-color;
@@ -137,7 +137,7 @@
   position: relative;
   left: 0;
   right: 0;
-  top: 70%;
+  top: 90%;
   z-index: 1;
   & .search-view {
     background: #ffffff61;
@@ -208,7 +208,7 @@
 }
 @media (max-width: 992px) {
   .mid-view .mid-text {
-    margin: 80px 20px 20px auto;
+    margin: 80px 20px 20px 20px;
   }
   .mid-view .mid-text h1 {
     font-size: 45px;
@@ -218,7 +218,7 @@
     max-height: 55vh;
   }
   .search-secition {
-    top: 378px;
+    top: 433px;
   }
   .mid-view .mid-icons i {
     font-size: 29px;
@@ -256,19 +256,20 @@
 @media (max-width: 640px) {
   .mid-text {
     width: 100%;
-    margin-top: 35px !important;
+    margin: 29px 20px auto auto !important;
     text-align: center;
   }
   .mid-view .mid-text p {
     text-align: center;
-    width: 70%;
+    width: 85%;
     margin: 12px auto;
+    max-width: unset;
   }
   .mid-right {
     text-align: center;
     margin: 0;
     width: 100%;
-    top: 225px;
+    top: 257px;
     right: 0;
     & .image-a {
       width: 39%;
@@ -276,7 +277,10 @@
     }
   }
   .mid-icons {
-    margin-top: 198px;
+    position: absolute;
+    top: 478px;
+    left: 0;
+    right: 0;
   }
   .search-view {
     position: absolute;
@@ -284,7 +288,7 @@
     right: 0;
   }
   .u888932 {
-    margin-top: 66px;
+    margin-top: 85px;
   }
   .search-result {
     top: 55px;
@@ -293,9 +297,6 @@
     right: 0;
     width: 89% !important;
     margin: auto !important;
-    & section {
-      // width: 250px;
-    }
   }
   #search-container .blog-right {
     justify-content: center;
@@ -309,6 +310,9 @@
   }
 }
 @media (max-width: 540px) {
+  .u888932 {
+    margin-top: 97px;
+  }
   .search-secition .search-view {
     width: 94%;
   }
@@ -329,16 +333,18 @@
     flex-direction: column ;
   }
 }
-
 @media (max-width: 500px) {
   .mid-right {
-    top: 245px;
+    top: 275px;
   }
   .search-secition {
-    top: 457px;
+    top: 446px;
   }
 }
 @media (max-width: 440px) {
+  .u888932 {
+    margin-top: 113px;
+  }
   .product-categories section {
     width: 73%;
   }
@@ -350,7 +356,7 @@
     width: 88%;
   }
   .mid-right {
-    top: 252px;
+    top: 297px;
   }
   .mid-right .image-a {
     width: 50%;
@@ -360,14 +366,17 @@
   }
 }
 @media (max-width: 360px) {
+  .u888932 {
+    margin-top: 55px;
+  }
   .mid-view .mid-text p {
     width: 90%;
   }
   .mid-right {
-    top: 211px;
+    top: 277px;
   }
   .mid-icons {
-    margin-top: 142px;
+    top: 443px;
   }
   .mid-view .mid-icons i {
     font-size: 22px;
@@ -377,6 +386,6 @@
     font-size: 32px;
   }
   .search-secition {
-    top: 378px;
+    top: 407px;
   }
 }

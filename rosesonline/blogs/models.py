@@ -24,6 +24,7 @@ class Blogs(models.Model):
     updatedAt = models.DateTimeField(auto_now=True)
     author = models.CharField(max_length=255, blank=False)
     tags = models.CharField(max_length=500, blank=True, default='')
+    keywords = models.CharField(max_length=500, blank=True, default='')
     views = models.IntegerField(default=539, blank=True, verbose_name="Post Views")
     isNew = models.BooleanField(default=True, blank=False, help_text='this item is new?', verbose_name='is new')
     isActive = models.BooleanField(default=True, blank=False, help_text='enable and disable the product on view.', verbose_name='is active')
