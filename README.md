@@ -1,0 +1,3 @@
+This is online ecommerce website developed in django python with MySQL. in this shop we can do amazon dropshipping or affiliate marketting not only amazon but we can do same process with all major online stores like Ali baba, Ebay and etc.
+To run this we only need to install required libraries of python. just download or use git clone and extract then go inside the folder and call `pip install requirements.txt` to install all necessary libraries of python.
+after installing all libraries go inside the folder where manage.py is located and open terminal and type `python manage.py start` start the project. in localhost its uses SQLite Database which is good for testing and development time.
